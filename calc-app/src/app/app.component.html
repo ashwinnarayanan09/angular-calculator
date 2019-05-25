@@ -1,0 +1,44 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+
+  <br><br>
+  <div class="row" style="margin-left: 10px">
+
+    <div class="col-3-md">
+      <div class="form-group" >
+        <label htmlFor="value1">Value1:</label>
+        <input type="number" class="form-control" id="value1" name="value1" [(ngModel)]="value1" (input)="calculate()"/>
+      </div>
+    </div>
+    <div class="col-3-md">
+      <div class="form-group">
+        <label htmlFor="value2">Value2:</label>
+        <input type="number" class="form-control" id="value2" name="value2" [(ngModel)]="value2" (input)="calculate()"/>
+      </div>
+    </div>
+    <div class="col-3-md">
+      <div class="form-group">
+        <label htmlFor="value3">Value3:</label>
+        <input type="number" class="form-control" id="value3" name="value3" [(ngModel)]="value3" (input)="calculate()"/>
+      </div>
+    </div>
+    <div class="col-3-md" id="result">
+      <div class="radio">
+        <label><input type="radio" name="optradio" [(ngModel)]="operation" value="sum"
+                      (change)="calculate()"/>Sum</label>
+      </div>
+      <div class="radio">
+        <label><input type="radio" name="optradio" [(ngModel)]="operation" value="multiply" (change)="calculate()"/>Multiply</label>
+      </div>
+
+        <strong>Result:{{result}}</strong>
+     
+    </div>
+
+  </div>
+
+  <br>
+
+
+</div>
+
